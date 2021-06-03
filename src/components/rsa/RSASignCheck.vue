@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-        <h3 class="mb-4 text-center">Kiểm tra chữ ký</h3>
+        <h3 class="mb-4 text-center">Kiem tra ky RSA</h3>
         <div class="content">
             <div class="input">
                 <label class="mb-1">Nhap x</label>
@@ -20,14 +20,14 @@
                 <div><strong>Modulo khóa công khai n = </strong> {{this.n || 'undefined'}}</div>
                 <hr>
                 <strong>
-                    Kiem tra (x, s) = (x === s ^ e mod n) ? {{this.check === this.x}}
+                    Kiem tra qua trinh ky (x = s ^ e mod n):  <span class="text-danger">{{this.check === this.x}}</span>
                 </strong>
                 <hr>
                 <div v-if="s && e && n">
 
                     <div><strong>s ^ e mod n = {{this.s}} ^ {{this.e}} mod {{this.n}} = <span class="text-danger">{{this.check}}</span> </strong></div>
-                    <div v-if="check === x"><strong  class="text-danger"> Chữ ký hợp lệ</strong></div>
-                    <div v-else><strong  class="text-danger"> Chữ ký không hợp lệ</strong></div>
+                    <div v-if="check === x"><strong  class="text-danger"> Chu ky hop le</strong></div>
+                    <div v-else><strong  class="text-danger"> Chu ky khong hop le</strong></div>
                 </div>
             </div>
         </div>

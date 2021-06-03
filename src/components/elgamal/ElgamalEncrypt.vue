@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-        <h3 class="mb-4 text-center">Mã hóa Elgamal</h3>
+        <h3 class="mb-4 text-center">Ma hoa he mat Elgamal</h3>
         <div class="content">
             <div class="input">
                 <label class="mb-1">Nhap ban ro x</label>

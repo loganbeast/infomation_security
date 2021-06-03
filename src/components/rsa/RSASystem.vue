@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-        <h3 class="mb-4 text-center">Xây dựng hệ mật RSA</h3>
+        <h3 class="mb-4 text-center">Xay dung he mat RSA</h3>
         <div class="content">
             <div class="input">
                 <label class="mb-1">Nhap ban ro x</label>
@@ -93,7 +93,6 @@ export default {
     },
     computed: {
         n () {
-            console.log("==================asdasdas")
             if (this.p && this.q_tmp) {
                 return new BigNumber(this.p).multipliedBy(this.q_tmp).toFixed()
             } else return undefined

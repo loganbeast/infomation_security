@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h3 class="mb-4 text-center"> Tính mũ theo Modulo y</h3>
+    <h3 class="mb-4 text-center"> Tinh toan y = x^ e mod n</h3>
     <div class="content">
         <div class="input">
             <label class="mb-1">Nhap x</label>

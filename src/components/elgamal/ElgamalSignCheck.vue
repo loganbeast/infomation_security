@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-        <h3 class="mb-4 text-center">Kiểm tra chữ ký</h3>
+        <h3 class="mb-4 text-center">Kiem tra ky Elgamal</h3>
         <div class="content">
             <div class="input">
                 <label class="mb-1">Nhap x</label>
@@ -21,16 +21,14 @@
             <div class="answer">
                 <div>
                     <div>
-                        <strong>Kiem tra (x, s2, s2) = true &lt;=> (beta ^ s1) * (s1 ^ s2) mod p = alpha ^ x mod p </strong>
+                        <strong>A = (beta ^ s1) * (s1 ^ s2) mod p = </strong> ({{this.beta}} ^ {{this.s1}}) * ({{this.s1}}, {{this.s2}}) modulo {{this.p}} = {{this.VT}}
                     </div>
                     <div>
-                        <strong>(beta ^ s1) * (s1 ^ s2) mod p = </strong> ({{this.beta}} ^ {{this.s1}}) * ({{this.s1}}, {{this.s2}}) modulo {{this.p}} = {{this.VT}}
-                    </div>
-                    <div>
-                        <strong>alpha ^ x mod p = </strong>{{this.alpha}} ^ {{this.x}} modulo {{this.p}} = {{this.VP}}
+                        <strong>B = alpha ^ x mod p = </strong>{{this.alpha}} ^ {{this.x}} modulo {{this.p}} = {{this.VP}}
                     </div>
                 </div>
                 <div>
+                    <strong>Kiem tra A = B => (beta ^ s1) * (s1 ^ s2) mod p = alpha ^ x mod p ? =></strong>
                     <strong v-if="check" class="text-danger">Chữ ký hợp lệ</strong>
                     <strong v-else class="text-danger">Chữ ký không hợp lệ</strong>
                 </div>

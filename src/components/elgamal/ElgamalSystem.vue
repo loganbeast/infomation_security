@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-        <h3 class="mb-4 text-center">Ký văn bản X bằng hệ mật Elgamal</h3>
+        <h3 class="mb-4 text-center">Xay dung he mat Elgamal</h3>
         <div class="content">
             <div class="input">
                 <label class="mb-1">Nhap x</label>
@@ -45,8 +45,10 @@
                 </div>
                 <hr>
                 <div class="mb-4">
-                    <h4>Lập mã</h4>
+                    <h4>Thuc hien lap ma: </h4>
+                    
                     <div>
+                        <p>Ta co:</p>
                         <strong>gamma = a^k mod p =</strong> {{this.a}} ^ {{this.k}} modulo {{this.p}} = {{this.gamma}}
                     </div>
                     <div>
@@ -57,8 +59,9 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <h4>Giải mã</h4>
+                    <h4>Thuc hien giai ma: </h4>
                     <div>
+                        <p>Ta co:</p>
                         <strong>gamma ^ -a mod p = gamma^(p-1-a) mod p = gamma ^ (p-a-1) mod p = </strong> {{this.gamma}} ^ ({{this.p}} - {{this.a}} - 1) modulo {{this.p}} = {{this.gamma2}}
                     </div>
                     <div>

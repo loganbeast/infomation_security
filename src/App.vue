@@ -61,8 +61,13 @@
     <div class="content">
       <router-view></router-view>
     </div>
+    <footer class="text-center">
+      <p class="font-weight-bold"><code class="text-danger">Nguyen Thanh Son - 18021087 - INT3213_2</code></p>
+      <p class="font-weight-bold"><code class="text-danger">Nhap mon an toan thong tin - TS.Le Phe Do</code></p>
+    </footer>
   </div>
-</template>2357
+  
+</template>
 
 <script>
 export default {

@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-      <h3 class="mb-4 text-center"> Ký văn bản X bằng cặp khóa bí mật (d, n)</h3>
+      <h3 class="mb-4 text-center"> Ky van ban RSA</h3>
     <div class="content">
         <div class="input">
             <label class="mb-1">Nhap ban ro x</label>

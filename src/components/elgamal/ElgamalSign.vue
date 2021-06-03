@@ -1,6 +1,6 @@
 <template>
   <div class='wrapper'>
-        <h3 class="mb-4 text-center">Ký văn bản X bằng hệ mật Elgamal</h3>
+        <h3 class="mb-4 text-center">Ky van ban Elgamal</h3>
         <div class="content">
             <div class="input">
                 <label class="mb-1">Nhap ban ro x</label>
@@ -26,7 +26,7 @@
                     <strong>Cặp khóa bí mật để ký: (a, k) = </strong>({{this.a || 'undefined'}}, {{this.k || 'undefined'}} )
                 </div>
                 <div>
-                    <strong>egcd(k, p - 1) mod p - 1 = </strong>{{this.ed || 'undefined'}}
+                    <strong>extends_gcd(k, p - 1) mod p - 1 = </strong>{{this.ed || 'undefined'}}
                 </div>
                 <div>
                     <strong>(x - a * s) mod p - 1 = </strong>{{this.ed2 || 'undefined'}}

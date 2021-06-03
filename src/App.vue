@@ -1,21 +1,90 @@
 <template>
   <div id="app">
-    <RSASystem/>
+
+    <div class="header"> 
+      <b-dropdown id="dropdown-1" text="He mat RSA">
+        <b-dropdown-item>
+          <router-link
+              to="/RSAModuloCaculate"
+              style="margin:8px"
+          >Tinh toan y = x ^ e mod n</router-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <router-link
+              to="/RSASign"
+              style="margin:8px"
+          >Ky van ban RSA</router-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <router-link
+              to="/RSASignCheck"
+              style="margin:8px"
+          >Kiem tra ky RSA</router-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <router-link
+              to="/RSASystem"
+              style="margin:8px"
+          >RSA</router-link>
+        </b-dropdown-item>
+      </b-dropdown>
+      <b-dropdown id="dropdown-1" text="He mat Elgamal">
+        <b-dropdown-item>
+          <router-link
+              to="/ElgamalEncrypt"
+              style="margin:8px"
+          >Ma hoa Elgamal</router-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <router-link
+              to="/ElgamalSign"
+              style="margin:8px"
+          >Ky van ban Elgamal</router-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <router-link
+              to="/ElgamalSignCheck"
+              style="margin:8px"
+          >Kiem tra ky Elgamal</router-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <router-link
+              to="/ElgamalSystem"
+              style="margin:8px"
+          >Elgamal</router-link>
+        </b-dropdown-item>
+      </b-dropdown>
+      <b-dropdown id="dropdown-1" text="He mat tren duong cong Eliptic">
+        <b-dropdown-item>First Action</b-dropdown-item>
+      </b-dropdown>
+    </div> 
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
-</template>
+</template>2357
 
 <script>
-// import RSAModuloCaculate from './components/rsa/RSAModuloCaculate.vue'
-// import RSASign from './components/rsa/RSASign.vue'; 
-// import RSASignCheck from './components/rsa/RSASignCheck.vue'; 
-import RSASystem from './components/rsa/RSASystem.vue'; 
 export default {
-  name: 'App',
-  components: {
-    RSASystem
-  }
+  name: 'App'
 }
 </script>
 
-<style>
+<style scoped>
+.header {
+  text-align: center;
+}
+.group_dropdown {
+  margin: 0px !important;
+}
+.dropdown-toggle::after {
+}
+a {
+  text-decoration: none;
+  
+}
+#app {
+  width: 100%;
+}
+
 </style>

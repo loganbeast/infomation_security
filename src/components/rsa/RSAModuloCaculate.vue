@@ -1,16 +1,23 @@
 <template>
-  <div class='container'>
-      <h3 class="mb-4"> Tính mũ theo Modulo y</h3>
-      <div>
-          <b-button variant="outline-secondary" @click="reset">Clear All</b-button>
-      </div>
-      <hr>
-      <div>
-          <b-form-input v-model="x" type="number" placeholder="Input x" class="mb-4"></b-form-input>
-          <b-form-input v-model="e" type="number" placeholder="Input e" class="mb-4"></b-form-input>
-          <b-form-input v-model="n" type="number" placeholder="Input n" class="mb-4"></b-form-input>
-      </div>
-      <h3>y = x ^ e mod n = {{this.answer || 'undefined'}}</h3>
+  <div class="wrapper">
+    <h3 class="mb-4 text-center"> Tính mũ theo Modulo y</h3>
+    <div class="content">
+        <div class="input">
+            <label class="mb-1">Nhap x</label>
+            <b-form-input v-model="x" type="number" placeholder="Input x" class="mb-4"></b-form-input>
+            <label class="mb-1">Nhap e</label>
+            <b-form-input v-model="e" type="number" placeholder="Input e" class="mb-4"></b-form-input>
+            <label class="mb-1">Nhap n</label>
+            <b-form-input v-model="n" type="number" placeholder="Input n" class="mb-4"></b-form-input>
+
+            <b-button class="mt-2" variant="outline-secondary" @click="reset">Reset</b-button>
+        </div>
+        <div class="answer">
+            <strong>y = x ^ e mod n = </strong> {{this.answer || 'undefined'}}
+        </div>
+    </div>
+        
+        
   </div>
   
 </template>
@@ -51,8 +58,24 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+    margin: 60px;
+}
 .container {
-    margin-top: 100px;
-    width: 50%;
+    margin-top:20px;
+    width: 90%;
+}
+.content {
+    background-color: rgb(242, 242, 242);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.input {
+    width: 30%;
+    margin-right: 30px;
+}
+.answer {
+    width: 70%;
 }
 </style>
